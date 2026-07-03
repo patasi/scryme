@@ -94,11 +94,11 @@ function FeatureCard({
         duration: 0.55,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative bg-card border border-border rounded-xl p-6 flex flex-col hover:border-primary/30 hover:shadow-md transition-all duration-300"
+      className="group relative bg-card border border-border rounded-lg p-6 flex flex-col hover:border-primary/30 hover:shadow-md transition-all duration-300"
     >
       {/* Icon */}
       <div
-        className="w-11 h-11 rounded-lg flex items-center justify-center mb-5 shrink-0 transition-transform group-hover:scale-110 duration-300"
+        className="w-11 h-11 rounded-md flex items-center justify-center mb-5 shrink-0 transition-transform group-hover:scale-110 duration-300"
         style={{ background: feature.colorBg }}
       >
         <Icon size={20} style={{ color: feature.color }} />
@@ -130,7 +130,7 @@ function FeatureCard({
 
       {/* Subtle hover glow */}
       <div
-        className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
         style={{
           background: `radial-gradient(ellipse 80% 60% at 20% 20%, ${feature.colorBg}, transparent)`,
         }}

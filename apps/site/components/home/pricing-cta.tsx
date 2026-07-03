@@ -51,13 +51,13 @@ export function PricingCTA() {
           <div className="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link
               href="/pricing"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary-foreground text-primary px-6 py-3 text-sm font-semibold shadow hover:bg-primary-foreground/90 transition-colors"
+              className="inline-flex items-center gap-2 rounded-md bg-primary-foreground text-primary px-6 py-3 text-sm font-semibold shadow hover:bg-primary-foreground/90 transition-colors"
             >
               View pricing <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/40 text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors"
+              className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/40 text-primary-foreground px-6 py-3 text-sm font-semibold hover:bg-primary-foreground/10 transition-colors"
             >
               Talk to sales
             </Link>
@@ -66,7 +66,7 @@ export function PricingCTA() {
 
         {/* Stats card */}
         <div className="flex-1 w-full max-w-md">
-          <div className="rounded-2xl bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm p-8 space-y-6">
+          <div className="rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 backdrop-blur-sm p-8 space-y-6">
             {[
               { label: "Businesses on Scryme", value: "4,200+" },
               { label: "Transactions processed daily", value: "$3.8M+" },

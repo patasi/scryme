@@ -21,7 +21,7 @@ function POSCheckout() {
 
   return (
     <div
-      className="rounded-2xl overflow-hidden"
+      className="rounded-xl overflow-hidden"
       style={{
         border: "1px solid var(--border)",
         boxShadow: "var(--shadow-xl)",
@@ -107,13 +107,13 @@ function POSCheckout() {
 
           {/* Payment methods */}
           <div className="flex flex-col gap-2 pt-2">
-            <button className="w-full py-2.5 rounded-lg text-xs font-bold text-primary-foreground bg-primary hover:bg-primary/90 transition-colors">
+            <button className="w-full py-2.5 rounded-md text-xs font-bold text-primary-foreground bg-primary hover:bg-primary/90 transition-colors">
               Card / Tap
             </button>
-            <button className="w-full py-2 rounded-lg text-xs font-medium text-foreground bg-secondary hover:bg-secondary/80 transition-colors">
+            <button className="w-full py-2 rounded-md text-xs font-medium text-foreground bg-secondary hover:bg-secondary/80 transition-colors">
               Cash
             </button>
-            <button className="w-full py-2 rounded-lg text-xs font-medium text-foreground bg-secondary hover:bg-secondary/80 transition-colors">
+            <button className="w-full py-2 rounded-md text-xs font-medium text-foreground bg-secondary hover:bg-secondary/80 transition-colors">
               M-Pesa
             </button>
           </div>
@@ -165,7 +165,7 @@ export function POSTeaser() {
 
             <Link
               href="/products/pos"
-              className="inline-flex items-center gap-2 mt-8 px-5 py-3 rounded-lg text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 mt-8 px-5 py-3 rounded-md text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               style={{ boxShadow: "var(--shadow-primary)" }}
             >
               Explore POS

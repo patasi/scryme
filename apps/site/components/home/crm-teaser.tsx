@@ -45,7 +45,7 @@ function CRMKanban() {
 
   return (
     <div
-      className="rounded-2xl overflow-hidden border"
+      className="rounded-xl overflow-hidden border"
       style={{ border: "1px solid var(--border)", boxShadow: "var(--shadow-xl)" }}
     >
       {/* Header bar */}
@@ -168,7 +168,7 @@ export function CRMTeaser() {
 
             <Link
               href="/products/crm"
-              className="inline-flex items-center gap-2 mt-8 px-5 py-3 rounded-lg text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 mt-8 px-5 py-3 rounded-md text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               style={{ boxShadow: "var(--shadow-primary)" }}
             >
               Explore CRM

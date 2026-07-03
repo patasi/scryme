@@ -85,7 +85,7 @@ export function Navbar() {
         >
           <div
             className={cn(
-              "w-8 h-8 rounded-lg flex items-center justify-center",
+              "w-8 h-8 rounded-md flex items-center justify-center",
               "bg-primary"
             )}
           >
@@ -131,7 +131,7 @@ export function Navbar() {
             {/* Dropdown */}
             <div
               className={cn(
-                "absolute top-full left-0 mt-1 w-72 rounded-xl border border-border bg-card shadow-lg p-2",
+                "absolute top-full left-0 mt-1 w-72 rounded-lg border border-border bg-card shadow-lg p-2",
                 "transition-all duration-200",
                 productsOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -148,7 +148,7 @@ export function Navbar() {
                     key={product.name}
                     href={product.href}
                     role="menuitem"
-                    className="flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-accent transition-colors group/item"
+                    className="flex items-start gap-3 px-3 py-2.5 rounded-md hover:bg-accent transition-colors group/item"
                     onClick={() => setProductsOpen(false)}
                   >
                     <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary/15 transition-colors">
@@ -208,7 +208,7 @@ export function Navbar() {
             Sign in
           </Link>
           <Link
-            href="/contact"
+            href="/sign-up"
             className="px-4 py-2 rounded-md text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-sm"
             style={{ boxShadow: "var(--shadow-primary)" }}
           >
@@ -251,7 +251,7 @@ export function Navbar() {
               <Link
                 key={product.name}
                 href={product.href}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-accent transition-colors"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 <div className="w-7 h-7 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
@@ -270,7 +270,7 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="px-3 py-2.5 rounded-lg text-sm font-medium text-foreground hover:bg-accent transition-colors"
+              className="px-3 py-2.5 rounded-md text-sm font-medium text-foreground hover:bg-accent transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.name}
@@ -280,14 +280,14 @@ export function Navbar() {
           <div className="border-t border-border mt-2 pt-4 flex flex-col gap-2">
             <Link
               href="/login"
-              className="px-4 py-2.5 rounded-lg text-sm font-medium text-center text-foreground border border-border hover:bg-accent transition-colors"
+              className="px-4 py-2.5 rounded-md text-sm font-medium text-center text-foreground border border-border hover:bg-accent transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Sign in
             </Link>
             <Link
-              href="/contact"
-              className="px-4 py-2.5 rounded-lg text-sm font-semibold text-center bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              href="/sign-up"
+              className="px-4 py-2.5 rounded-md text-sm font-semibold text-center bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Get Started

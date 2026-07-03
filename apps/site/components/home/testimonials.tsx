@@ -59,7 +59,7 @@ export function Testimonials() {
           {testimonials.map((t) => (
             <blockquote
               key={t.name}
-              className="bg-card rounded-xl p-7 flex flex-col border border-border hover:border-primary/25 hover:shadow-md transition-all duration-300"
+              className="bg-card rounded-lg p-7 flex flex-col border border-border hover:border-primary/25 hover:shadow-md transition-all duration-300"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5" aria-label="5 out of 5 stars">

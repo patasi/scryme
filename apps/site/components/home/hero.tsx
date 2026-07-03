@@ -23,7 +23,7 @@ function MockDashboard() {
 
   return (
     <div
-      className="relative w-full rounded-xl overflow-hidden border"
+      className="relative w-full rounded-lg overflow-hidden border"
       style={{
         background: "#0a0f1e",
         borderColor: "rgba(255,255,255,0.08)",
@@ -295,11 +295,11 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-4 justify-center lg:justify-start"
             >
               <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
+                href="/sign-up"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95"
                 style={{
-                  background: "#4f46e5",
-                  boxShadow: "0 0 0 0 rgba(79,70,229,0), 0 4px 16px -2px rgba(79,70,229,0.5)",
+                  background: "var(--primary)",
+                  boxShadow: "var(--shadow-primary)",
                 }}
               >
                 Start Free Trial
@@ -307,7 +307,7 @@ export function Hero() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md text-sm font-semibold transition-all"
                 style={{
                   background: "rgba(255,255,255,0.06)",
                   border: "1px solid rgba(255,255,255,0.12)",

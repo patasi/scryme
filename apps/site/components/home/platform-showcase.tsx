@@ -437,7 +437,7 @@ export function PlatformShowcase() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={cn(
-                  "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+                  "flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200",
                   activeTab === tab.id
                     ? "text-white"
                     : "hover:bg-white/5"
@@ -465,7 +465,7 @@ export function PlatformShowcase() {
 
         {/* Mock UI panel */}
         <div
-          className="rounded-2xl overflow-hidden"
+          className="rounded-xl overflow-hidden"
           style={{
             background: "#0a0f1e",
             border: "1px solid rgba(255,255,255,0.08)",

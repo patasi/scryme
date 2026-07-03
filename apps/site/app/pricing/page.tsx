@@ -23,7 +23,7 @@ const plans = [
     period: "/mo",
     tagline: "For independent retailers getting started",
     cta: "Start free trial",
-    href: "/signup",
+    href: "/sign-up",
     highlight: false,
     features: [
       "1 POS terminal",
@@ -43,7 +43,7 @@ const plans = [
     period: "/mo",
     tagline: "For growing businesses with multiple staff",
     cta: "Start free trial",
-    href: "/signup",
+    href: "/sign-up",
     highlight: true,
     badge: "Most popular",
     features: [
@@ -126,7 +126,7 @@ export default function PricingPage() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl border p-8 flex flex-col gap-6 ${
+              className={`relative rounded-xl border p-8 flex flex-col gap-6 ${
                 plan.highlight
                   ? "border-primary bg-primary/5 shadow-xl shadow-primary/10"
                   : "border-border bg-surface-1"
@@ -153,7 +153,7 @@ export default function PricingPage() {
 
               <Link
                 href={plan.href}
-                className={`inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors ${
+                className={`inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition-colors ${
                   plan.highlight
                     ? "bg-primary text-primary-foreground hover:bg-primary/90"
                     : "border border-border text-foreground hover:bg-surface-2"
@@ -187,7 +187,7 @@ export default function PricingPage() {
         <h2 className="text-2xl font-bold text-foreground text-center mb-10">
           Full feature comparison
         </h2>
-        <div className="rounded-2xl border border-border overflow-hidden">
+        <div className="rounded-xl border border-border overflow-hidden">
           {/* Table header */}
           <div className="grid grid-cols-4 bg-surface-2 border-b border-border px-6 py-4">
             <span className="text-xs font-semibold uppercase tracking-wider text-muted">Feature</span>
