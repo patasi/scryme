@@ -19,6 +19,7 @@ export interface ExtendedUser extends User {
 // Extended Session interface including activeOrganizationId
 export interface ExtendedSession extends Session {
   activeOrganizationId?: string | null;
+  isOrgSuspended?: boolean;
 }
 
 // Session cache interface
@@ -26,6 +27,7 @@ interface CachedUserData {
   activeOrganizationId?: string | null;
   memberId?: string;
   role?: MemberRole | UserRole | string;
+  isOrgSuspended?: boolean;
 }
 
 // OAuth claim interfaces
@@ -189,6 +191,7 @@ export const auth = betterAuth({
               session: {
                 ...session,
                 activeOrganizationId: parsedCache.activeOrganizationId ?? null,
+                isOrgSuspended: parsedCache.isOrgSuspended ?? false,
               } as ExtendedSession,
             };
           }
@@ -228,27 +231,38 @@ export const auth = betterAuth({
           role: MemberRole | undefined;
         } = { memberId: undefined, role: undefined };
 
+        // Default suspension state
+        let isOrgSuspended = false;
+
         // Fetch membership details if active org exists
         if (activeOrganizationId) {
-          const member = await db.member.findUnique({
-            where: {
-              organizationId_userId: {
-                organizationId: activeOrganizationId,
-                userId: user.id,
+          const [member, organization] = await Promise.all([
+            db.member.findUnique({
+              where: {
+                organizationId_userId: {
+                  organizationId: activeOrganizationId,
+                  userId: user.id,
+                },
               },
-            },
-            select: { id: true, role: true },
-          });
+              select: { id: true, role: true },
+            }),
+            db.organization.findUnique({
+              where: { id: activeOrganizationId },
+              select: { isSuspended: true },
+            }),
+          ]);
 
           if (member) {
             memberData = { memberId: member.id, role: member.role };
           }
+          isOrgSuspended = organization?.isSuspended ?? false;
         }
 
         const customUserData: CachedUserData = {
           activeOrganizationId,
           memberId: memberData.memberId,
           role: memberData.role || user.role,
+          isOrgSuspended,
         };
 
         try {
@@ -265,6 +279,7 @@ export const auth = betterAuth({
           session: {
             ...session,
             activeOrganizationId,
+            isOrgSuspended,
           } as ExtendedSession,
         };
       },
