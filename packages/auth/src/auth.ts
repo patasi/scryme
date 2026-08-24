@@ -97,8 +97,10 @@ export const auth = betterAuth({
     "https://scryme.tech",
     "https://app.scryme.tech",
     "https://crm.scryme.tech",
+    "https://admin.scryme.tech",
     "http://localhost:3000",
     "http://localhost:3001",
+    "http://localhost:3007",
   ],
   rateLimit: {
     enabled: true,
