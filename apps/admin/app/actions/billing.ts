@@ -163,6 +163,9 @@ export async function listSystemPayments() {
       organization: {
         select: { id: true, name: true, slug: true },
       },
+      member: {
+        select: { user: { select: { name: true, email: true } } },
+      },
     },
   });
 }
